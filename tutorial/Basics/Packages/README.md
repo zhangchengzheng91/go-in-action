@@ -22,3 +22,22 @@ import (
 > 由于这个程序的运行环境是固定的的，所以每次返回的随机值都是相同的。
 > 如何判定运行环境？
 > 为了看到不同的数字，需要生成器提供不同的种子数，参见**rand.Seed**。**rand.Seed** 没整明白，先略过。
+
+# Exported names
+
+在 go 语言中，导出的变量都是大驼峰。
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	fmt.Println(math.Pi)
+	// error
+	// fmt.Println(math.pi)
+}
+```
